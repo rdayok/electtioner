@@ -1,9 +1,12 @@
 package com.rdi.electioner.dto.requests;
 
+import lombok.Getter;
 import lombok.Setter;
 
 @Setter
-public class AdminRegistrationRequest {
-    private Long voterId;
+@Getter
+public class SuperAdminRegistrationRequest {
+
+    private String name;
     private String password;
 }

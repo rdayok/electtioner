@@ -1,10 +1,9 @@
 package com.rdi.electioner.services;
 
-import com.rdi.electioner.dto.requests.AdminRegistrationRequest;
-import com.rdi.electioner.dto.responses.AdminRegistrationResqponse;
-import org.springframework.stereotype.Service;
+import com.rdi.electioner.dto.requests.ChairmanRegistrationRequest;
+import com.rdi.electioner.dto.responses.AdminRegistrationResponse;
 
-@Service
+
 public interface AdminService {
-    AdminRegistrationResqponse register(AdminRegistrationRequest adminRegistrationResquest);
+    AdminRegistrationResponse register(ChairmanRegistrationRequest adminRegistrationResquest);
 }
