@@ -1,7 +1,6 @@
 package com.rdi.electioner.services;
 
-import com.rdi.electioner.dto.requests.AdminRegistrationRequest;
-import com.rdi.electioner.dto.responses.AdminRegistrationResqponse;
+import com.rdi.electioner.exceptions.VoterNotFoundException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,15 +13,15 @@ public class AdminServiceTest {
     @Autowired
     private AdminService adminService;
     @Test
-    public void testRegisterAdmin() {
-        AdminRegistrationRequest adminRegistrationResquest =
-                new AdminRegistrationRequest();
-        adminRegistrationResquest.setVoterId(1L);
-        adminRegistrationResquest.setPassword("max_man23");
-        AdminRegistrationResqponse adminRegistrationResqponse =
-                adminService.register(adminRegistrationResquest);
+    public void testRegisterAdmin() throws VoterNotFoundException {
+        ChairmanRegistrationRequest chairmanRegistrationRequest =
+                new ChairmanRegistrationRequest();
+        chairmanRegistrationRequest.setVoterId(1L);
+        AdminRegistrationResponse adminRegistrationResponse =
+                adminService.register(chairmanRegistrationRequest);
 
-        assertNotNull(adminRegistrationResqponse);
-        assertNotNull(adminRegistrationResqponse.getVoterId());
+        assertNotNull(adminRegistrationResponse);
+        System.out.println(adminRegistrationResponse);
+        assertNotNull(adminRegistrationResponse.getId());
     }
 }

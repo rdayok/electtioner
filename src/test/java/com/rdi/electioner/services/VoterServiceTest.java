@@ -1,7 +1,5 @@
 package com.rdi.electioner.services;
 
-import com.rdi.electioner.dto.requests.VoterRegistrationRequest;
-import com.rdi.electioner.dto.responses.VoterRegistrationResponse;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,11 +1,12 @@
 package com.rdi.electioner.data.models;
 
+import com.rdi.electioner.enums.Role;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-import static com.rdi.electioner.data.models.Role.SUPER_ADMIN;
+import static com.rdi.electioner.enums.Role.SUPER_ADMIN;
 
 @Entity
 @Setter
